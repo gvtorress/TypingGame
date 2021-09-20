@@ -39,6 +39,14 @@ body {
     color: #282c34;
 }
 
+.container .valid-keys .matched.completed {
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    animation: moveDown 1s ease-in;
+}
+
 .container .valid-keys .remainder {
     opacity: 0.5;
 }
@@ -62,4 +70,27 @@ body {
     font-size: 1.8rem;
     line-height: 2.5rem;
     opacity: 0.5;
+    display: flex;
+}
+
+.container .completed-words ol {
+    flex-grow: 1;
+    align-self: flex-end;
+}
+
+@keyframes moveDown {
+    0% {
+        top: 0;
+        opacity: 1;
+    }
+    20% {
+        top: -5rem;
+        background-color: #26947c;
+        transform: scale(1.2);
+    }
+    100% {
+        top: 25rem;
+        transform: scale(0.7);
+        opacity: 0;
+    }
 }
